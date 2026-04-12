@@ -1,0 +1,92 @@
+
+:root{
+    --color-primario: #2c3e50;
+    --fuente-principal: Arial, sans-serif;
+    --radio-borde: 8px;
+    --sombra: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--color-primario);
+    padding: 1rem;
+    
+}
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem ;
+    padding: 1rem;
+    background-color: rgb(190, 219, 160);
+}
+
+section{
+    flex: 1 1 300px;
+}
+
+.tarjeta {
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+    padding: 1rem;
+    background-color: red;
+
+}
+p {
+    margin: 30px ;
+    padding: 10px ;
+    border-width: 5px;
+    border-style: dashed;
+    border-color: rgb(66, 128, 66);
+    border-radius: 4px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+}
+
+img {
+    border-width: 5px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 8px;
+}
+
+
+form{
+    background-color: aqua;
+    margin: 1rem auto;
+    padding: 1rem;
+    max-width: 200px;
+    max-height: 200px;
+
+}
+
+.lista_desordenada{
+    background-color: rgb(138, 125, 125);
+
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    h1 {font-size: 24px ;}
+}
