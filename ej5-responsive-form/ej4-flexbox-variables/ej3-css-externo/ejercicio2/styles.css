@@ -15,7 +15,7 @@
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     background-color: var(--color-primario);
     padding: 1rem;
     
@@ -24,6 +24,8 @@ nav a {
     color: white;
     text-decoration: none;
 }
+
+nav p { background-color: azure; }
 
 main {
     display: flex;
@@ -42,6 +44,9 @@ section{
     box-shadow: var(--sombra);
     padding: 1rem;
     background-color: red;
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
 
 }
 p {

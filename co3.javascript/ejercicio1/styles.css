@@ -5,7 +5,8 @@ h1{
     border-width: 8px;
     border-color: black;
     border-style: double;
-    padding: 10%;
-    margin: 5%;
+    margin: 10%;
+    padding: 1%;
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }

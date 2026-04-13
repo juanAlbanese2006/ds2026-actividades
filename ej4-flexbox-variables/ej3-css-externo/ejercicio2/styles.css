@@ -18,8 +18,8 @@ nav{
     justify-content: space-around;
     background-color: var(--color-primario);
     padding: 1rem;
+    
 }
-
 nav a {
     color: white;
     text-decoration: none;

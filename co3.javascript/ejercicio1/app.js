@@ -5,12 +5,47 @@ const materia = 'Ds' ;
 console.log(`Me llamo ${nombre}, tengo ${edad} años y curso ${materia}`);
 
 let contador = 0;
-
-// Usamos un bucle for para sumarle 1 tres veces
 for (let i = 0; i < 3; i++) {
     contador = contador +1;
     console.log (`contador es ${contador}`);
 }
 
-// Mostramos el valor final
 console.log("El valor final del contador es:", contador);
+
+function clasificacionNota ( nota ){
+    if (nota < 4 ) {return "desaprobado";}
+    else if (nota >= 4 && nota <= 7 ) { return "aprobado";}
+    else if (nota >= 8 && nota <=10){return "promocionado";}
+    else {return "nota invalida";}
+
+}
+
+console.log(clasificacionNota(11));
+console.log(clasificacionNota(1));
+console.log(clasificacionNota(5));
+console.log(clasificacionNota(9));
+
+function diaDeLaSemana (numero) {
+    switch (numero){
+        case 1:
+            return "lunes";
+        case 2:
+            return "martes";
+        case 3:
+            return "miercoles";
+        case 4:
+            return "jueves";
+        case 5:
+            return "viernes";
+        case 6:
+            return "sabado (Fin de semana)";
+        case 7:
+            return "domingo (Fin de semana)";
+        default:
+            return "dia invalido";
+    }
+}
+
+console.log(diaDeLaSemana (1));
+console.log(diaDeLaSemana (6));
+console.log(diaDeLaSemana (8));
