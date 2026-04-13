@@ -65,3 +65,32 @@ console.log(calcularPrecioFinal(300, "D"));
 console.log(calcularPrecioFinal(300, "E"));
 console.log(calcularPrecioFinal(300, "C"));
 console.log(calcularPrecioFinal(500, "D"));
+
+
+function operacionesEnArrys(){
+    let arry = [2, 6, 12, 94 , 26, 67, 100 , 9];
+    let total = 0; 
+    let num_menor = arry[0];
+    let num_mayor= arry[0];
+    let promedio= 0; 
+    for (let i=0; i< arry.length; i ++){
+        total = total + arry[i];
+        if (arry[i] <= num_menor){ num_menor = arry[i];}
+        else if (arry[i] >= num_mayor) {num_mayor = arry[i];}
+    }
+    if (arry.length==0){ promedio =0;}
+    else {promedio= (total/arry.length);}
+    return `total ${total} | numero mayor ${num_mayor} | numero menor ${num_menor} | promedio ${promedio}`;
+}
+
+console.log (operacionesEnArrys());
+
+function generarAsteriscos(n){
+    let asteriscos = "";
+    for (let i=0; i<n; i++){
+        asteriscos = `${asteriscos}*`;
+    }
+    return asteriscos;
+}
+
+console.log (generarAsteriscos(3));
