@@ -49,3 +49,19 @@ function diaDeLaSemana (numero) {
 console.log(diaDeLaSemana (1));
 console.log(diaDeLaSemana (6));
 console.log(diaDeLaSemana (8));
+
+function calcularPrecioFinal (monto, medioPago){
+    if (monto <= 200){return `monto ${monto}| pago ${medioPago} | final ${monto}`;}
+    else if (monto > 200 && monto < 400){
+        if (medioPago == "E") {return `monto ${monto}| pago ${medioPago} | final ${monto * 0.7}`;}
+        else if (medioPago == "D") {return `monto ${monto}| pago ${medioPago} | final ${monto * 0.8}`;}
+        else if (medioPago == "C") {return `monto ${monto}| pago ${medioPago} | final ${monto * 0.9}`;}
+    } else if (monto >= 400){return `monto ${monto}| pago ${medioPago} | final ${monto * 0.6}`; }
+}
+
+
+console.log(calcularPrecioFinal(200, "E"));
+console.log(calcularPrecioFinal(300, "D"));
+console.log(calcularPrecioFinal(300, "E"));
+console.log(calcularPrecioFinal(300, "C"));
+console.log(calcularPrecioFinal(500, "D"));
