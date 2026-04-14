@@ -94,3 +94,25 @@ function generarAsteriscos(n){
 }
 
 console.log (generarAsteriscos(3));
+
+const imputAltura = document.getElementById("altura_piramide");
+const imputGenerarArbol = document.getElementById("generar_arbol");
+const imputResultadoArbol = document.getElementById("resultado_piramide");
+
+function generarPiramide(){
+    let n = parseInt(imputAltura.value);
+    let salida ="";
+
+    if (isNaN(n) || n<1){
+        imputResultadoArbol.textContent="Error: ingresa un número mayor o igual a 1";
+        return;
+    }
+
+    for (let i=0; i<=n ; i++){
+        salida += "*".repeat(i) + "\n";
+    }
+
+    imputResultadoArbol.textContent = salida;
+}
+
+imputGenerarArbol.addEventListener("click", generarPiramide);
