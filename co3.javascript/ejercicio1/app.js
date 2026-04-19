@@ -116,3 +116,47 @@ function generarPiramide(){
 }
 
 imputGenerarArbol.addEventListener("click", generarPiramide);
+
+// Capturamos elementos del DOM
+const inputProducto = document.getElementById("producto");
+const btnAgregar = document.getElementById("btnAgregar");
+const lista = document.getElementById("lista");
+const contadorr = document.getElementById("contador");
+
+
+function actualizarContador() {
+  const cantidad = lista.children.length;
+  contadorr.textContent = `${cantidad} productos en la lista`;
+}
+
+
+function agregarProducto() {
+  const nombre = inputProducto.value; 
+
+
+
+  const li = document.createElement("li");
+  li.textContent = nombre;
+
+
+  const btnEliminar = document.createElement("button");
+  btnEliminar.textContent = "Eliminar";
+
+
+  btnEliminar.addEventListener("click", () => {
+    lista.removeChild(li);
+    actualizarContador();
+  });
+
+
+  li.appendChild(btnEliminar);
+
+
+  lista.appendChild(li);
+
+
+  actualizarContador();
+}
+
+
+btnAgregar.addEventListener("click", agregarProducto);
