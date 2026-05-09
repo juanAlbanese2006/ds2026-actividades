@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Catálogo ABM</title>
+</head>
+<body>
+  <h1>Catálogo</h1>
+  <form id="formLibro">
+    <input type="text" id="titulo" placeholder="Título">
+    <input type="text" id="autor" placeholder="Autor">
+    <input type="number" id="precio" placeholder="Precio">
+    <input type="checkbox" id="disponible"> Disponible
+    <input type="text" id="genero" placeholder="Género (opcional)">
+    <button type="submit">Agregar</button>
+  </form>
+  <div id="errorForm"></div>
+  <ul id="listado"></ul>
+  <p id="stats"></p>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -72,7 +72,7 @@ function validarFormulario(): Libro | null {
   return nuevoLibro;
 }
 
-// Handler del formulario
+
 document.getElementById("formLibro")?.addEventListener("submit", (e) => {
   e.preventDefault();
   const libro = validarFormulario();
@@ -82,5 +82,5 @@ document.getElementById("formLibro")?.addEventListener("submit", (e) => {
   }
 });
 
-// Mostrar inicial
+
 renderizar(catalogo);
