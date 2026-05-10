@@ -20,7 +20,7 @@ function mostrarLibros(libros) {
         // Si no hay portada, usamos un placeholder
         const cover = libro.cover_i 
             ? `https://covers.openlibrary.org/b/id/${libro.cover_i}-M.jpg`
-            : "https://via.placeholder.com/150";
+            : "descarga.png";
 
         const card = `
             <div class="col-md-4 mb-4">
