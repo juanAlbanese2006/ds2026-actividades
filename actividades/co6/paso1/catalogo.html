@@ -34,39 +34,18 @@
         </div>
     </nav>
     <div class="container my-5">
-        <h2>Formulario de Contacto</h2>
-        <form>
-        <!-- Nombre -->
-            <div class="mb-3">
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" placeholder="nombre" required>
-            </div>
+        <!-- Buscador -->
+        <div class="input-group mb-3">
+            <input type="text" id="searchInput" class="form-control" placeholder="Buscar libro...">
+            <button id="searchBtn" class="btn btn-primary">Buscar</button>
+        </div>
 
-        <!-- Email -->
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="tuemail@ejemplo.com" required>
-            </div>
-    <!-- Asunto -->
-            <div class="mb-3">
-                <label for="asunto" class="form-label">Asunto</label>
-                <select class="form-select" id="asunto">
-                    <option value="consulta">Consulta</option>
-                    <option value="reclamo">Reclamo</option>
-                    <option value="sugerencia">Sugerencia</option>
-                </select>
-            </div>
+        <!-- Resultados -->
+        <div id="results" class="row"></div>
+        </div>
+        <!-- Error -->
+        <p id="error" style="color: red; display: none;"></p>
 
-        <!-- Mensaje -->
-            <div class="mb-3">
-                <label for="mensaje" class="form-label">Mensaje</label>
-                <textarea class="form-control" id="mensaje" rows="4" placeholder="mensaje " required></textarea>
-            </div>
-
-    <!-- Botón -->
-            <button type="submit" class="btn btn-primary">Enviar</button>
-        </form>
-    </div>
 <!-- Conectar el JS -->
 <script src="js/data.js"></script>
 

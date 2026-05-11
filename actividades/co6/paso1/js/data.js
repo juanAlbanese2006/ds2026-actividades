@@ -29,12 +29,12 @@ function mostrarLibros(libros) {
                     <div class="card-body">
                         <h5 class="card-title">${libro.title}</h5>
                         <p class="card-text">${libro.author_name ? libro.author_name[0] : "Autor desconocido"}</p>
-                        <a href="libro.html" class="btn btn-primary">Ver más</a>
+                        <a href="libro.html?id=${libro.key}" class="btn btn-primary">Ver más</a>
                     </div>
                 </div>
             </div>
         `;
-        resultados.innerHTML += card; // CORREGIDO
+        resultados.innerHTML += card; 
     });
 }
 
