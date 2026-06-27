@@ -1,0 +1,5 @@
+[
+  { "id": 1, "title": "Clean Code", "author": "Robert C. Martin", "precio": 50 },
+  { "id": 2, "title": "Refactoring", "author": "Martin Fowler", "precio": 60 },
+  { "id": 3, "title": "Domain-Driven Design", "author": "Eric Evans", "precio": 70 }
+]
