@@ -1,0 +1,17 @@
+{
+  "compilerOptions" : {
+    "objetivo" : " ES2022 " ,
+    "módulo" : " CommonJS " ,
+    "moduleResolution" : " nodo " ,
+    "rootDir" : " ./src " ,
+    "outDir" : " ./dist " ,
+    "esModuleInterop" : verdadero ,
+    "forceConsistentCasingInFileNames" : verdadero ,
+    "estricto" : verdadero ,
+    "skipLibCheck" : verdadero ,
+    "resolveJsonModule" : verdadero ,
+    "sourceMap" : verdadero
+  },
+  "incluir" : [ " src/**/* " ],
+  "excluir" : [ " node_modules " , " dist " ]
+}
