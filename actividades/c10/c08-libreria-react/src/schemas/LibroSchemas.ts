@@ -1,4 +1,4 @@
-// src/schemas/libroSchema.ts
+// schemas/libroSchema.ts
 import { z } from "zod";
 
 export const libroSchema = z.object({

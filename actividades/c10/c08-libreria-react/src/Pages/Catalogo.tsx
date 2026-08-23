@@ -13,7 +13,7 @@ const Catalogo = ({ libros }: Props) => (
     <Row>
       {libros.map((libro, index) => (
         <Col md={4} key={index}>
-          <BookCard title={libro.title} author={libro.author} precio={libro.precio} />
+          <BookCard title={libro.title} author={libro.author} precio={libro.precio} disponible={libro.disponible} />
         </Col>
       ))}
     </Row>

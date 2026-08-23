@@ -3,7 +3,7 @@ import { Card, Button } from 'react-bootstrap';
 import type { BookCardProps } from "../Types/BookCard.ts";
 
 
-const BookCard = ({ title, author }: BookCardProps) => {
+const BookCard = ({ title, author, precio }: BookCardProps) => {
   const [likes, setLikes] = useState<number>(0);
 
   const handleLike = () => {
@@ -14,7 +14,8 @@ const BookCard = ({ title, author }: BookCardProps) => {
     <Card className="mb-4">
       <Card.Body>
         <Card.Title>{title}</Card.Title>
-        <Card.Text>Autor: {author}</Card.Text>
+        <Card.Text>Autor: {author} </Card.Text>
+        <Card.Text>Price: {precio}</Card.Text>
         <Button variant="primary" onClick={handleLike}>
           👍 Me gusta ({likes})
         </Button>

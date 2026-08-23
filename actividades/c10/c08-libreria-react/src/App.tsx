@@ -11,9 +11,9 @@ import type { BookCardProps } from './Types/BookCard';
 function App() {
   // Estado inicial con 3 libros
   const [libros, setLibros] = useState<BookCardProps[]>([
-    { title: "Harry Potter", author: "J.K. Rowling", precio: 1000 },
-    { title: "El Señor de los Anillos", author: "J.R.R. Tolkien", precio: 1000 },
-    { title: "Cien Años de Soledad", author: "Gabriel García Márquez", precio: 1000 },
+    { title: "Harry Potter", author: "J.K. Rowling", precio: 1000 ,},
+    { title: "El Señor de los Anillos", author: "J.R.R. Tolkien", precio: 1000 , },
+    { title: "Cien Años de Soledad", author: "Gabriel García Márquez", precio: 1000 , },
   ]);
 
   // Función para agregar un libro
