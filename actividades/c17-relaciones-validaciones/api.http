@@ -1,0 +1,35 @@
+### Listar libros
+GET http://localhost:3000/api/libros
+
+### Listar disponibles
+GET http://localhost:3000/api/libros?disponible=true
+
+### Obtener libro por ID
+GET http://localhost:3000/api/libros/1
+
+### Crear libro
+POST http://localhost:3000/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Ficciones",
+  "autor": "Jorge Luis Borges",
+  "precio": 6500,
+  "imagen": "https://example.com/ficciones.jpg",
+  "disponible": true
+}
+
+### Actualizar libro
+PUT http://localhost:3000/api/libros/1
+Content-Type: application/json
+
+{
+  "titulo": "El principito (Edición Especial)",
+  "autor": "Antoine de Saint-Exupéry",
+  "precio": 5500,
+  "imagen": "https://example.com/principito-especial.jpg",
+  "disponible": true
+}
+
+### Eliminar libro
+DELETE http://localhost:3000/api/libros/1
