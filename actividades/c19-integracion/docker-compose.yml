@@ -5,7 +5,7 @@ services:
       - "3000:3000"
       - "5555:5555"
     env_file:
-      - backend/.env
+      - ./backend/.env
     volumes:
       - ./backend/src:/app/src
       - ./backend/prisma:/app/prisma
@@ -19,7 +19,7 @@ services:
     ports:
       - "54320:5432"
     env_file:
-      - backend/.env
+      - ./backend/.env
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
