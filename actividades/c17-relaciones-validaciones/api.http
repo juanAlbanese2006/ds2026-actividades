@@ -33,3 +33,77 @@ Content-Type: application/json
 
 ### Eliminar libro
 DELETE http://localhost:3000/api/libros/1
+
+@baseUrl = http://localhost:3000
+
+### ============================================
+### CASOS FELICES
+### ============================================
+
+### Listar todos los libros (ahora con autor)
+GET {{baseUrl}}/api/libros
+
+### Obtener libro por ID (con autor y categorías)
+GET {{baseUrl}}/api/libros/1
+
+### Crear un libro
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "El Aleph",
+  "precio": 6000,
+  "imagen": "https://example.com/el-aleph.jpg",
+  "disponible": true,
+  "autorId": 5
+}
+
+### ============================================
+### CASOS DE ERROR (¡NUEVOS!)
+### ============================================
+
+### 400 - Sin título
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "precio": 5000,
+  "imagen": "https://example.com/sin-titulo.jpg",
+  "autorId": 1
+}
+
+### 400 - ID inválido (abc no es número)
+GET {{baseUrl}}/api/libros/abc
+
+### 400 - ID negativo
+GET {{baseUrl}}/api/libros/-5
+
+### 400 - autorId inválido (no existe)
+POST {{baseUrl}}/api/libros
+Content-Type: application/json
+
+{
+  "titulo": "Libro huérfano",
+  "precio": 5000,
+  "imagen": "https://example.com/huerfano.jpg",
+  "autorId": 9999
+}
+
+### 404 - Libro que no existe
+GET {{baseUrl}}/api/libros/9999
+
+### 409 - Autor duplicado
+POST {{baseUrl}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Gabriel García Márquez",
+  "nacionalidad": "Colombia"
+}
+
+### 409 - Borrar autor con libros (onDelete: Restrict)
+DELETE {{baseUrl}}/api/autores/1
+
+GET {{baseUrl}}/api/libros
+
+GET {{baseUrl}}/api/libros/1
