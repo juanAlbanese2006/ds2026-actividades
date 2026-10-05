@@ -1,0 +1,16 @@
+import { PrismaClient } from "../generated/prisma/client";
+import { PrismaPg } from "@prisma/adapter-pg";
+
+const adapter = new PrismaPg({
+  connectionString: process.env.DATABASE_URL,
+});
+
+// ⚠️ omit global: NUNCA devuelve passwordHash por defecto
+export const prisma = new PrismaClient({
+  adapter,
+  omit: {
+    usuario: {
+      passwordHash: true, // true = omitir (ocultar)
+    },
+  },
+});
