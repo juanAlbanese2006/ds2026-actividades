@@ -9,3 +9,7 @@ export const autorUpdateSchema = autorCreateSchema.partial();
 
 export type AutorCreate = z.infer<typeof autorCreateSchema>;
 export type AutorUpdate = z.infer<typeof autorUpdateSchema>;
+
+export const idParamSchema = z.object({
+  id: z.coerce.number().int().positive("El id debe ser un número positivo"),
+});
