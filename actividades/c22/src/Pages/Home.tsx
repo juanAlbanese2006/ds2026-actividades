@@ -1,9 +1,3 @@
-import Catalogo from "./Catalogo.tsx"
-import { Routes, Route } from 'react-router-dom';
-import Navbar from '../components/Navbar.tsx';
-import Footer from '../components/Footer.tsx';
-
-
 
 function Home() {
   return (
